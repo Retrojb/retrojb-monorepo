@@ -1,0 +1,60 @@
+{
+  "name": "@ctp/design-system",
+  "version": "0.0.1",
+  "description": "Component Library for CTP applications",
+  "author": "retrojb",
+  "license": "MIT",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "src/index.ts",
+  "types": "lib/typescript/components/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "design-system",
+    "components",
+    "react",
+    "react-native"
+  ],
+  "scripts": {
+    "build": "bob build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "pack": "turbo run pack",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "tsc": "../../../node_modules/.bin/tsc"
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@storybook/react": "^8.2.6",
+    "@storybook/react-native": "^7.6.20",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react-native-svg": "^15.4.0",
+    "react-native-web": "^0.19.12",
+    "ts-lib": "^0.0.5"
+  },
+  "dependencies": {
+    "@ctp/design-system-provider": "^0.0.1",
+    "@ctp/design-system-tokens": "^0.0.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"name": "utils",
+	"version": "0.2.0",
+	"description": "Node JS utility package",
+	"type": "module",
+	"scripts": {
+		"lint": "eslint \"**/*.{js,ts,tsx}\"",
+		"clear-packages": "node src/module-cleaner.js",
+		"create-component": "node src/creator-friend.js"
+	},
+	"devDependencies": {
+		"commander": "^11.0.0",
+		"mkdirp": "^3.0.1"
+	},
+	"packageManager": "yarn@3.5.1"
+}

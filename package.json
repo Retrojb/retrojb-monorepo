@@ -1,23 +1,36 @@
 {
   "name": "retro-design-system",
   "private": true,
+  "packageManager": "npm@10.8.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/design-system/*"
+  ],
   "scripts": {
     "build": "turbo build",
+    "build:components": "npm run build --workspace=@ctp/design-system",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "package:version": "npx changeset version",
+    "publish:packages": "turbo build && changeset version && changeset publish",
+    "storybook:native:run": "npm run storybook --workspace=native-sandbox",
+    "storybook:native:build": "npm run build:storybook --workspace=native-sandbox"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "audit-ci": "^7.1.0",
     "prettier": "^3.2.5",
+    "react": "18.2",
+    "react-dom": "18.2",
+    "react-native": "^0.74.3",
+    "react-native-builder-bob": "^0.27.0",
+    "react-native-web": "^0.19.12",
     "turbo": "^2.0.9",
     "typescript": "^5.4.5"
   },
   "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@9.6.7",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+    "node": ">=20"
+  }
 }

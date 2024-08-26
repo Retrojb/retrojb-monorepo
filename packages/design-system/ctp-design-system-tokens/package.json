@@ -1,0 +1,47 @@
+{
+  "name": "@ctp/design-system-tokens",
+  "version": "0.0.1",
+  "description": "Design Token package",
+  "author": "retrojb",
+  "license": "MIT",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "src/index.ts",
+  "types": "lib/typescript/index.d.ts",
+  "source": "index.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "design-system",
+    "components",
+    "react",
+    "react-native"
+  ],
+  "scripts": {
+    "build": "bob build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "pack": "turbo run pack",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "tsc": "../../../node_modules/.bin/tsc"
+        }
+      ]
+    ]
+  }
+}

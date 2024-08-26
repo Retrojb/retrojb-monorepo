@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+*.iml
+.DS_Store
+.env
+.turbo/
+.storybook/
+storybook-static/
+apps/
+.nvmrc
+audit-ci.jsonc
+tsconfig.json
+turbo.json
+.npmrc

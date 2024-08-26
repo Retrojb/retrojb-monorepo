@@ -16,7 +16,7 @@ node_modules
 coverage
 
 # Turbo
-.turbo
+.turbo/
 
 # Vercel
 .vercel
@@ -26,6 +26,7 @@ coverage
 out/
 build
 dist
+lib
 
 
 # Debug

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "declaration": true,
+    "noEmit": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "types": ["jest"],
+    "noErrorTruncation": true
+  },
+  "include": ["src/**/*", "index.d.ts"],
+  "exclude": ["node_modules", "dist", "lib", "assets"]
+}
