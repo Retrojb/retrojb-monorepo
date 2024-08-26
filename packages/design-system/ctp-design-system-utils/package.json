@@ -3,8 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clear:packages": "node src/module-cleaner.js"
+  },
+  "devDependencies": {
+    "commander": "^11.0.0",
+    "mkdirp": "^3.0.1"
   },
   "author": "retrojb",
   "license": "MIT"

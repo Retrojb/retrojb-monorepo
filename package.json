@@ -10,6 +10,7 @@
   "scripts": {
     "build": "turbo build",
     "build:components": "npm run build --workspace=@ctp/design-system",
+    "clean": "npm run clean:packages --workspace=utils",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
