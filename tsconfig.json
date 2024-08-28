@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@design-system/*": ["packages/design-system/*/lib"]
+      "@design-system/*": ["packages/design-system/*"],
+      "@design-system-provider/*": ["packages/design-system/ctp-design-system-provider/*"]
     }
   }
 }

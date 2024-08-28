@@ -23,7 +23,8 @@
     "react-native"
   ],
   "scripts": {
-    "build": "bob build",
+    "build": "npm run prepare",
+    "prepare": "bob build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "pack": "turbo run pack",
